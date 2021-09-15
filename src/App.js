@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {Route, Switch, BrowserRouter as Router} from "react-router-dom"
+import Home from './views/Home';
+import injectContext from './store/appContext';
+import {Navbar} from './components/Navbar';
+import Cardinfo from './views/Info';
+import Planetsinfo from './views/Planetsinfo';
+import Vehiclesinfo from './views/Vehiclesinfo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    return <Router>
+        <Navbar />
+        <Switch>
+            <Route exact path = "/">
+                <Home />
+            </Route>
+            <Route exact path = "/Info/">
+                <Cardinfo />
+            </Route>
+            <Route exact path = "/Planetsinfo/">
+                <Planetsinfo />
+            </Route>
+            <Route exact path = "/Vehiclesinfo/">
+                <Vehiclesinfo />
+            </Route>
+         
+        </Switch>
+    </Router>
+
 }
+  
 
-export default App;
+export default injectContext(App);
