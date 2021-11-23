@@ -14,9 +14,10 @@ export const Navbar = () => {
               <li className="w-100">
                   <span>{item}</span>
                   <i className="m-2" onClick ={() => {
-                    actions.removerlista(indice)}}>{icon}</i></li>
+                    actions.removerlista(indice)}}>{icon}</i>
+              </li>
             </div>});
-  
+  //col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3
   return (
     <nav className="navbar gray container-fluid">
     <div className="container pb-3">

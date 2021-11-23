@@ -43,8 +43,7 @@ export const getState = ({getActions, getStore, setStore }) => {
                 return indice !== i 
               }) 
               setStore({Lista: nuevoArray})
-             }, 
-             getFotos: () => {}
+             },
             
              } 
             }}   

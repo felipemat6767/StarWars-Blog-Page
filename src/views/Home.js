@@ -24,7 +24,6 @@ const Home = () => {
    return(
     <>
     <div className = "container">
-
         <h1 className = "m-3 text-danger">Characters</h1>
         <div className = "d-flex">
         {store.people.map((personaje, i) => <Card data={personaje} key={i} indice={i} image ={fotospersonaje[i]}/>)} 
